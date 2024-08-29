@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <br><br>
+
+    <h1>All Articles:</h1>
+
+        <ul>
+        @foreach (Article article in Model)
+        {
+        <li>Section: @article.Section</li>
+        <li>Title: @article.Title</li>
+        <li>Abstract: @article.Abstract</li>
+        <li>Url: @article.Url</li>
+        <li>Byline: @article.Byline</li>
+        <li>Item Type: @article.Item_Type</li>
+        <br />
+        }
+        </ul>
+</div>
